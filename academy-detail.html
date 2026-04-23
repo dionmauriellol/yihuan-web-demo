@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>教程详情 - 易换官网</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="academy">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-main">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span class="brand-copy">
+            <span class="brand-title">易换</span>
+            <span class="brand-domain">yhqz.net</span>
+          </span>
+        </a>
+        <nav class="main-nav">
+          <a class="nav-link" data-page="home" href="index.html">首页</a>
+          <a class="nav-link" data-page="rates" href="rates.html">实时汇率</a>
+          <a class="nav-link" data-page="services" href="services.html">服务与优势</a>
+          <a class="nav-link" data-page="partners" href="partners.html">合作商家</a>
+          <a class="nav-link" data-page="academy" href="academy.html">新手学院</a>
+          <a class="nav-link" data-page="about" href="about.html">关于我们</a>
+        </nav>
+      </div>
+      <div class="utility-nav home-utility-nav">
+        <a class="utility-item utility-text" href="index.html#download"><span class="utility-mark icon-device"></span><span>下载APP</span></a>
+        <a class="utility-item utility-text" href="support.html"><span class="utility-mark icon-headset"></span><span>7*24客服</span></a>
+        <span class="utility-item utility-text"><span class="flag-chip">🇨🇳</span><span>中文</span><span class="utility-caret">▼</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main academy-detail-page">
+    <section class="section academy-detail-section">
+      <div class="container">
+        <div class="academy-detail-shell">
+          <div class="academy-detail-breadcrumb"><a href="academy.html">新手学院</a> / <a href="academy-list.html">教程列表</a> / <span>教程详情</span></div>
+
+          <section class="academy-detail-header">
+            <div class="academy-detail-header-copy">
+              <div class="pill-row academy-detail-badges" id="heroBadges"></div>
+              <h1 id="title">教程标题</h1>
+              <p id="summary">教程摘要</p>
+            </div>
+
+            <div class="academy-detail-meta-card">
+              <div class="academy-detail-meta-grid">
+                <div class="academy-detail-meta-item"><span>所属场景</span><strong id="scene">-</strong></div>
+                <div class="academy-detail-meta-item"><span>预计耗时</span><strong id="duration">-</strong></div>
+                <div class="academy-detail-meta-item"><span>对应页面</span><strong id="entry">-</strong></div>
+                <div class="academy-detail-meta-item"><span>更新时间</span><strong id="updatedAt">-</strong></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="academy-detail-video-shell">
+            <article class="academy-detail-video-card">
+              <div class="academy-detail-video-stage">
+                <div class="academy-detail-video-play">
+                  <span class="academy-detail-play-icon">▶</span>
+                  <span id="videoLabel">查看视频演示</span>
+                </div>
+                <strong id="stageTitle">先看演示，再开始操作。</strong>
+                <p id="stageDesc">视频摘要</p>
+              </div>
+            </article>
+
+            <aside class="academy-detail-video-notes">
+              <article class="academy-detail-note-box">
+                <h3>操作前先确认</h3>
+                <p id="beforeWatch">开始前提示</p>
+              </article>
+              <article class="academy-detail-note-box">
+                <h3>做完后看哪里</h3>
+                <p id="afterWatch">完成后提示</p>
+              </article>
+            </aside>
+          </section>
+
+          <section class="academy-detail-main">
+            <div class="academy-detail-main-copy">
+              <div class="academy-detail-block">
+                <div class="section-head">
+                  <div>
+                    <h2 class="section-title">视频章节</h2>
+                    <p class="section-copy">按章节快速查看重点内容，需要时可以直接跳到对应片段。</p>
+                  </div>
+                </div>
+                <div class="academy-detail-chapter-list" id="chapterList"></div>
+              </div>
+
+              <div class="academy-detail-block">
+                <div class="section-head">
+                  <div>
+                    <h2 class="section-title">图文步骤</h2>
+                    <p class="section-copy">如果不方便看完整视频，也可以直接按步骤完成操作。</p>
+                  </div>
+                </div>
+                <div class="academy-detail-step-list" id="stepList"></div>
+              </div>
+            </div>
+
+            <aside class="academy-detail-sidebar">
+              <article class="academy-detail-side-card">
+                <h4>教程列表</h4>
+                <div class="academy-detail-catalog" id="catalogList"></div>
+                <a class="link-more academy-detail-catalog-more" href="academy-list.html">查看全部教程</a>
+              </article>
+              <article class="academy-detail-side-card">
+                <h4>注意事项</h4>
+                <p id="risk"></p>
+              </article>
+              <article class="academy-detail-side-card">
+                <h4>常见问题</h4>
+                <div class="faq-list" id="faqList"></div>
+              </article>
+            </aside>
+          </section>
+
+          <section class="academy-detail-cta">
+            <div>
+              <h2>还有别的操作要看？回到新手学院继续查看。</h2>
+              <p>如果这篇教程已经解决了你的问题，可以继续返回新手学院查看下一篇；如果还有疑问，也可以直接联系客服。</p>
+            </div>
+            <div class="academy-home-actions">
+              <a class="primary-btn" href="academy.html">返回新手学院</a>
+              <a class="ghost-btn" href="index.html#download">下载APP</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer">
+    <div class="container">
+      <div class="home-footer-grid">
+        <div>
+          <h3>核心业务</h3>
+          <div class="home-footer-links">
+            <a href="rates.html">实时汇率</a>
+            <a href="services.html">在线换汇</a>
+            <a href="rates.html">汇率计算器</a>
+            <a href="services.html">国际汇款</a>
+            <a href="services.html">多币种兑换</a>
+            <a href="services.html">移动端换汇</a>
+          </div>
+        </div>
+        <div>
+          <h3>汇款服务</h3>
+          <div class="home-footer-links">
+            <a href="academy.html">新手学院</a>
+            <a href="academy-detail.html?topic=first-use">第一次使用</a>
+            <a href="academy-detail.html?topic=withdraw-third-party">第三方平台提现</a>
+            <a href="academy-detail.html?topic=deposit-chain">链上充值</a>
+          </div>
+        </div>
+        <div>
+          <h3>服务地区</h3>
+          <div class="home-footer-links">
+            <a href="services.html">马尼拉换汇</a>
+            <a href="services.html">曼谷换汇</a>
+            <a href="services.html">新加坡换汇</a>
+            <a href="services.html">东京换汇</a>
+            <a href="services.html">首尔换汇</a>
+            <a href="services.html">更多地区</a>
+          </div>
+        </div>
+        <div>
+          <h3>帮助与企业信息</h3>
+          <div class="home-footer-links">
+            <a href="about.html">关于我们</a>
+            <a href="support.html">联系我们</a>
+            <a href="partners.html">合作商家</a>
+            <a href="about.html">隐私政策</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="home-footer-copy">通过图文、视频、常见问题和注意事项，帮助用户在具体操作前快速确认关键信息。</p>
+
+      <div class="channel-row">
+        <a class="channel-btn" href="academy.html">返回新手学院</a>
+        <a class="channel-btn" href="support.html">7*24 在线客服</a>
+        <a class="channel-btn" href="index.html#download">立即下载</a>
+      </div>
+
+      <div class="home-footer-bottom">
+        <span>&copy; <span data-year></span> 官方网站</span>
+        <span>ICP备12345678号-1</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+  <script>
+    (function () {
+      var data = {
+        "first-use": {
+          title: "第一次使用平台怎么开始",
+          summary: "先通过一条短视频了解平台里的常用操作，再从一笔小额操作开始跑通流程。",
+          stageTitle: "先看一遍，再做第一笔。",
+          stageDesc: "第一次使用时，先建立路径感，再开始实际操作会更稳妥。",
+          scene: "首次使用",
+          duration: "约 1 分 30 秒",
+          entry: "首页精选视频",
+          updatedAt: "2026-03-13",
+          beforeWatch: "确认登录状态正常，并分清本次是换汇、转账、提现到第三方平台，还是充值到当前平台。",
+          afterWatch: "根据你的真实目标继续查看换汇、转账、提现或充值对应的教程。",
+          risk: "第一次操作建议先从小额开始，确认记录和到账状态无误后，再进行正式金额处理。",
+          badges: ["视频教程", "首页精选", "新手必看"],
+          chapters: [
+            ["00:00 - 00:20", "认识四类高频操作"],
+            ["00:20 - 00:50", "第一次应该先做哪一笔"],
+            ["00:50 - 01:10", "结果如何核对"],
+            ["01:10 - 01:30", "异常时去哪里找"]
+          ],
+          steps: [
+            ["确认当前目标", "先分清是换汇、转账、第三方平台提现，还是充值到当前平台。不同目标对应不同页面。"],
+            ["从小额开始验证", "第一次不要直接用正式金额，优先用小额确认方向、到账和结果判断方式。"],
+            ["做完一笔回记录页", "完成操作后先看记录页，再决定是否继续下一步。"]
+          ],
+          faqs: [
+            ["第一次最容易错在哪？", "最常见的是没确认方向、没看结果页就继续做下一步。"],
+            ["一定要完整看完视频吗？", "第一次建议完整看一遍，之后可以按章节回看。"]
+          ],
+          related: [
+            ["法币与虚拟币兑换", "exchange"],
+            ["平台内转账", "transfer"],
+            ["第三方平台提现", "withdraw-third-party"]
+          ]
+        },
+        "exchange": {
+          title: "法币与虚拟币兑换",
+          summary: "先看兑换方向，再确认汇率、手续费和最终到手结果。",
+          stageTitle: "先确认方向，再输入金额。",
+          stageDesc: "换汇最容易出错的是方向，不是金额。",
+          scene: "换汇",
+          duration: "约 2 分 30 秒",
+          entry: "换汇页",
+          updatedAt: "2026-03-13",
+          beforeWatch: "先确认换出的币种和换入的币种，再看页面上当前的汇率和费率说明。",
+          afterWatch: "回到换汇页核对方向后再提交，不够余额时先去充值。",
+          risk: "提交前请确认换出资产和换入资产，避免把法币换虚拟币和虚拟币换法币看反。",
+          badges: ["视频教程", "换汇", "高频操作"],
+          chapters: [
+            ["00:00 - 00:30", "页面结构和两侧币种"],
+            ["00:30 - 01:10", "怎么看方向和汇率"],
+            ["01:10 - 01:45", "手续费和到账说明"],
+            ["01:45 - 02:30", "结果核对和异常处理"]
+          ],
+          steps: [
+            ["确认换出和换入方向", "先看页面上下两块币种区，确认顶部是换出币种，底部是换入币种。"],
+            ["查看汇率和手续费", "输入金额前，先确认费率说明和预计到手结果。"],
+            ["提交后看结果", "换汇完成后查看记录和余额变化，再继续下一步。"]
+          ],
+          faqs: [
+            ["换汇前最先看什么？", "先看方向、汇率、手续费和预计到手金额。"],
+            ["余额不足怎么办？", "先去充值，再重新回到换汇页提交。"]
+          ],
+          related: [
+            ["第一次使用平台怎么开始", "first-use"],
+            ["平台内转账", "transfer"]
+          ]
+        },
+        "transfer": {
+          title: "平台内转账",
+          summary: "适合站内账户之间的转出和转入场景，重点确认对象、金额和记录状态。",
+          stageTitle: "先确认对象，再提交转账。",
+          stageDesc: "站内转账比第三方提现简单，但仍要先核对接收对象。",
+          scene: "平台内转账",
+          duration: "约 2 分钟",
+          entry: "转账页",
+          updatedAt: "2026-03-13",
+          beforeWatch: "确认余额充足，并确认当前场景是平台内转账，不是第三方平台提现。",
+          afterWatch: "转账提交后先看记录，再确认接收方是否已收到。",
+          risk: "转账前请核对转出对象、转入对象和金额，避免误把站内转账当成第三方提现处理。",
+          badges: ["视频教程", "站内转账"],
+          chapters: [
+            ["00:00 - 00:25", "转出和转入场景说明"],
+            ["00:25 - 00:55", "金额和对象如何确认"],
+            ["00:55 - 01:25", "提交流程和结果页"],
+            ["01:25 - 02:00", "异常时如何查记录"]
+          ],
+          steps: [
+            ["确认转出和转入对象", "先确认这是站内账户之间的转账，不是第三方平台提现。"],
+            ["核对金额和余额", "转账前先看可用余额，再确认本次金额。"],
+            ["回记录页确认状态", "订单显示完成后，再和接收方确认是否到账。"]
+          ],
+          faqs: [
+            ["转账和提现有什么区别？", "转账是平台内账户间转移，提现是向第三方平台或外部渠道转出。"],
+            ["做完转账后先看哪里？", "先看记录页，再看接收方是否已收到。"]
+          ],
+          related: [
+            ["法币与虚拟币兑换", "exchange"],
+            ["第三方平台提现", "withdraw-third-party"]
+          ]
+        },
+        "withdraw-third-party": {
+          title: "第三方平台提现",
+          summary: "先确认平台要求，再填写收款信息，提交后通过记录页和第三方平台同步确认到账结果。",
+          stageTitle: "先核对字段，再提交提现。",
+          stageDesc: "第三方平台提现最容易出问题的不是金额，而是收款信息不完整。",
+          scene: "第三方平台提现",
+          duration: "约 3 分钟",
+          entry: "提现页",
+          updatedAt: "2026-03-13",
+          beforeWatch: "先确认第三方平台需要哪些字段，尤其是地址、用户信息、平台账号和网络是否完整。",
+          afterWatch: "回到提现页逐项填写，提交后同步查看本平台记录和第三方平台到账状态。",
+          risk: "本平台显示已提交或已处理，并不代表第三方平台已经完成入账，最终以第三方平台到账结果为准。",
+          badges: ["视频教程", "重点教程", "第三方提现"],
+          chapters: [
+            ["00:00 - 00:35", "选择提现平台和币种"],
+            ["00:35 - 01:20", "填写金额和收款字段"],
+            ["01:20 - 02:10", "地址和网络信息核对"],
+            ["02:10 - 03:00", "记录页和到账结果确认"]
+          ],
+          steps: [
+            ["先选提现平台和币种", "根据页面先选择平台类型和提现币种，不同平台类型需要填写的字段不同。"],
+            ["填写金额和收款信息", "输入提现金额后，填写地址、用户信息、平台账号等字段，必要时通过联系人快速选择。"],
+            ["核对结果", "确认网络、手续费和实际到账金额后提交，并通过记录页继续跟踪状态。"]
+          ],
+          faqs: [
+            ["为什么显示处理中但第三方还没到账？", "处理中只代表本平台仍在流转，最终仍要看第三方平台是否入账。"],
+            ["补充字段填错会怎样？", "部分平台可能导致延迟甚至需要人工处理，所以提交前一定要逐项核对。"]
+          ],
+          related: [
+            ["USDT / TRX 链上充值", "deposit-chain"],
+            ["第一次使用平台怎么开始", "first-use"]
+          ]
+        },
+        "deposit-chain": {
+          title: "USDT / TRX 链上充值",
+          summary: "先确认平台和网络，再复制地址或保存二维码，从外部平台发起转入。",
+          stageTitle: "先确认网络，再复制地址。",
+          stageDesc: "链上充值最常见的问题是地址和网络不一致。",
+          scene: "链上充值",
+          duration: "约 2 分钟",
+          entry: "充值页",
+          updatedAt: "2026-03-13",
+          beforeWatch: "先选好充值平台和网络，再确认页面展示的地址和二维码就是当前要用的那一组。",
+          afterWatch: "回到充值页复制地址或保存二维码，从外部平台发起转入后查看到账结果。",
+          risk: "充值前请确认外部平台发起转入的网络和当前页面展示的网络一致，否则资产可能无法找回。",
+          badges: ["视频教程", "链上充值"],
+          chapters: [
+            ["00:00 - 00:25", "选择充值平台和网络"],
+            ["00:25 - 00:55", "复制地址或保存二维码"],
+            ["00:55 - 01:20", "从外部平台发起转入"],
+            ["01:20 - 02:00", "到账规则和结果查看"]
+          ],
+          steps: [
+            ["先确认充值网络", "页面会展示当前支持的网络，请确保外部平台发起转入时也选择同一网络。"],
+            ["复制地址或保存二维码", "你可以复制地址，也可以保存二维码后到外部平台扫码使用。"],
+            ["查看到账状态", "发起转入后回平台查看到账情况，如需历史地址可从页面入口查看。"]
+          ],
+          faqs: [
+            ["为什么页面提示只支持某条网络？", "因为该充值入口当前只接收指定链路的资产。"],
+            ["充值地址会变吗？", "可能会变更，提交前请以当前页面展示地址为准。"]
+          ],
+          related: [
+            ["白马会充值提交", "deposit-bhm"],
+            ["第三方平台提现", "withdraw-third-party"]
+          ]
+        },
+        "deposit-bhm": {
+          title: "白马会充值提交",
+          summary: "先填写充值信息，确认收款二维码后完成打款，再上传转账截图等待审核上分。",
+          stageTitle: "先打款，再上传真实凭证。",
+          stageDesc: "白马会充值不是链上地址模式，而是需要人工审核上分的充值方式。",
+          scene: "白马会充值",
+          duration: "约 3 分钟",
+          entry: "充值页 / 白马会",
+          updatedAt: "2026-03-13",
+          beforeWatch: "准备好白马会账号和姓名，确认充值金额，再进入确认页查看二维码和金额提示。",
+          afterWatch: "完成打款后上传真实截图，提交审核后等待上分结果，不要重复提交同一笔充值。",
+          risk: "上传凭证时必须包含转账金额、转账时间和收款方信息，避免因截图不完整导致审核延迟。",
+          badges: ["视频教程", "白马会充值", "审核流程"],
+          chapters: [
+            ["00:00 - 00:35", "填写充值信息"],
+            ["00:35 - 01:25", "确认二维码和充值金额"],
+            ["01:25 - 02:10", "上传截图提交审核"],
+            ["02:10 - 03:00", "怎么看审核和上分结果"]
+          ],
+          steps: [
+            ["填写充值信息", "在白马会充值页先填写充值金额、白马会账号和姓名，确保信息真实无误。"],
+            ["确认二维码并打款", "进入确认页后核对充值金额、二维码和页面提示，再按要求完成打款。"],
+            ["上传真实截图", "截图需包含金额、时间和收款方信息，提交后等待审核通过再上分。"]
+          ],
+          faqs: [
+            ["为什么提交后没有马上上分？", "白马会充值需要人工审核，提交后不是实时到账。"],
+            ["截图要包含哪些信息？", "至少要有转账金额、时间和收款方信息。"]
+          ],
+          related: [
+            ["USDT / TRX 链上充值", "deposit-chain"],
+            ["第一次使用平台怎么开始", "first-use"]
+          ]
+        },
+        "account-safety": {
+          title: "账户安全与结果确认",
+          summary: "先确认登录与验证状态，再学会看记录、看结果和处理常见异常情况。",
+          stageTitle: "先把关键确认点看明白。",
+          stageDesc: "很多问题不是操作失败，而是没有先确认记录、验证状态和最终结果。",
+          scene: "账户安全",
+          duration: "约 2 分钟",
+          entry: "账户与安全说明",
+          updatedAt: "2026-03-15",
+          beforeWatch: "先确认当前账号状态正常，再看本次问题是登录验证、结果确认，还是记录状态异常。",
+          afterWatch: "回到实际页面先看记录和状态，如果仍然无法判断，再联系平台客服继续确认。",
+          risk: "页面显示处理中、待确认或已提交，并不等于最终结果已经完成，请优先以记录页和实际到账结果为准。",
+          badges: ["图文 + 视频", "账户安全", "结果确认"],
+          chapters: [
+            ["00:00 - 00:25", "先确认账号和验证状态"],
+            ["00:25 - 00:55", "记录页里的几种常见状态"],
+            ["00:55 - 01:30", "结果确认时先看哪里"],
+            ["01:30 - 02:00", "异常时怎么继续处理"]
+          ],
+          steps: [
+            ["先看账号和验证状态", "如果当前账号提示异常、限制或需要补充验证，先完成当前提示再继续后续操作。"],
+            ["回记录页确认结果", "提交后先看记录页里的状态，再判断是处理中、待确认，还是已经完成。"],
+            ["遇到异常先保留信息", "如果结果和预期不一致，优先保留订单信息、页面状态和当前截图，再联系平台客服。"]
+          ],
+          faqs: [
+            ["处理中和已完成有什么区别？", "处理中代表流程还在流转，已完成才表示本平台侧流程结束。"],
+            ["什么时候需要联系客服？", "当你已经看过记录页和结果页，仍然无法判断状态或处理路径时，再联系客服最有效。"]
+          ],
+          related: [
+            ["第一次使用平台怎么开始", "first-use"],
+            ["第三方平台提现", "withdraw-third-party"]
+          ]
+        },
+        "withdraw-result": {
+          title: "提现结果怎么看",
+          summary: "学会区分处理中、已完成和失败等状态，再判断下一步怎么跟进。",
+          stageTitle: "先看状态，再决定下一步。",
+          stageDesc: "很多问题不是提现没走，而是没有先分清当前状态属于哪一种。",
+          scene: "提现结果确认",
+          duration: "约 1 分 40 秒",
+          entry: "订单记录 / 提现",
+          updatedAt: "2026-03-15",
+          beforeWatch: "先确认当前看的是否是提现记录，不要把转账记录和充值记录混在一起判断。",
+          afterWatch: "看完后回到记录页，对照当前状态再决定是继续等待还是联系客服。",
+          risk: "本平台显示处理中，并不等于第三方平台已经到账；如果页面已失败，先看失败原因再处理。",
+          badges: ["图文教程", "提现记录", "结果确认"],
+          chapters: [
+            ["00:00 - 00:25", "提现记录页看哪里"],
+            ["00:25 - 00:55", "处理中和已完成的区别"],
+            ["00:55 - 01:15", "失败状态怎么判断"],
+            ["01:15 - 01:40", "下一步该怎么做"]
+          ],
+          steps: [
+            ["先确认记录类型", "进入订单记录后先确认当前查看的是提现记录，再根据状态判断后续。"],
+            ["按状态判断结果", "处理中先继续等待，已完成要核对到账，失败则先看失败原因。"],
+            ["保留订单信息", "如果状态和预期不一致，优先保留订单号、金额和页面状态，再联系客服。"]
+          ],
+          faqs: [
+            ["处理中多久需要继续问？", "如果超过页面提示或业务常规时间仍无变化，再联系客服更有效。"],
+            ["失败了要重新提交吗？", "先看失败原因，确认问题解决后再决定是否重新提交。"]
+          ],
+          related: [
+            ["第三方平台提现", "withdraw-third-party"],
+            ["账户安全与结果确认", "account-safety"]
+          ]
+        },
+        "deposit-record": {
+          title: "充值记录怎么看",
+          summary: "确认当前充值方式、审核状态和到账结果，避免重复提交或重复询问。",
+          stageTitle: "先分清充值方式，再看记录状态。",
+          stageDesc: "链上充值和人工审核充值的结果判断方式并不一样。",
+          scene: "充值结果确认",
+          duration: "约 1 分 45 秒",
+          entry: "订单记录 / 充值",
+          updatedAt: "2026-03-15",
+          beforeWatch: "先确认本次是链上充值还是人工审核充值，不同方式对应不同到账节奏。",
+          afterWatch: "看完后回到记录页确认当前状态，避免重复上传截图或重复发起充值。",
+          risk: "人工审核充值不是实时到账；链上充值需要以链路确认和页面状态共同判断。",
+          badges: ["图文教程", "充值记录", "结果确认"],
+          chapters: [
+            ["00:00 - 00:30", "链上和人工审核怎么区分"],
+            ["00:30 - 01:00", "记录页里的几种状态"],
+            ["01:00 - 01:25", "到账后先看哪里"],
+            ["01:25 - 01:45", "异常时怎么继续确认"]
+          ],
+          steps: [
+            ["先看充值方式", "链上充值和白马会充值的结果判断不同，先分清本次是哪一种。"],
+            ["再看记录状态", "确认是待审核、处理中还是已到账，再判断当前是否需要继续等待。"],
+            ["异常时保留截图", "如果状态长时间不变或结果异常，保留页面截图和充值信息再联系客服。"]
+          ],
+          faqs: [
+            ["审核中是不是没提交成功？", "不是，审核中通常代表资料已提交，等待人工确认。"],
+            ["为什么到账后余额没变化？", "先刷新当前页面并查看记录状态，如仍异常再联系客服。"]
+          ],
+          related: [
+            ["USDT / TRX 链上充值", "deposit-chain"],
+            ["白马会充值提交", "deposit-bhm"]
+          ]
+        },
+        "partner-cashout": {
+          title: "到店取现流程怎么走",
+          summary: "先看合作商家信息，再了解收款码、现场确认和结果判断方式。",
+          stageTitle: "先确认门店，再到店处理。",
+          stageDesc: "到店取现更看重门店信息、现场流程和结果确认方式。",
+          scene: "合作商家 / 到店取现",
+          duration: "约 2 分 10 秒",
+          entry: "合作商家页 / 商家详情",
+          updatedAt: "2026-03-15",
+          beforeWatch: "先确认你要去的商家信息、营业时间和当前支持的服务，再按流程准备到店。 ",
+          afterWatch: "到店后按门店要求完成现场流程，做完后回记录页或现场结果确认区核对状态。",
+          risk: "不同商家支持的服务范围可能不同，出发前请先以当前商家详情说明为准。",
+          badges: ["图文教程", "合作商家", "到店流程"],
+          chapters: [
+            ["00:00 - 00:25", "先看哪类商家信息"],
+            ["00:25 - 00:55", "到店前要确认什么"],
+            ["00:55 - 01:35", "现场流程怎么走"],
+            ["01:35 - 02:10", "结果怎么确认"]
+          ],
+          steps: [
+            ["先确认商家信息", "进入合作商家页后先看门店信息、营业时间和当前提供的服务。"],
+            ["到店后按提示处理", "到店后根据门店说明完成收款码确认或现场流程，不要跳过关键确认步骤。"],
+            ["做完后看结果", "完成后先看页面记录或商家现场确认结果，再决定是否离开。"]
+          ],
+          faqs: [
+            ["所有合作商家都支持同样服务吗？", "不一定，具体可做的服务以当前商家详情说明为准。"],
+            ["到店前要不要先联系商家？", "如果你不确定营业时间或现场流程，建议先确认。"]
+          ],
+          related: [
+            ["合作商家页面怎么查看", "first-use"],
+            ["账户安全与结果确认", "account-safety"]
+          ]
+        }
+      };
+
+      var catalog = [
+        ["第一次使用平台怎么开始", "first-use", "新手入门"],
+        ["法币与虚拟币兑换", "exchange", "换汇"],
+        ["平台内转账", "transfer", "转账"],
+        ["第三方平台提现", "withdraw-third-party", "提现"],
+        ["USDT / TRX 链上充值", "deposit-chain", "充值"],
+        ["白马会充值提交", "deposit-bhm", "充值"],
+        ["提现结果怎么看", "withdraw-result", "结果确认"],
+        ["充值记录怎么看", "deposit-record", "结果确认"],
+        ["到店取现流程怎么走", "partner-cashout", "合作商家"],
+        ["账户安全与结果确认", "account-safety", "账户安全"]
+      ];
+
+      function queryTopic() {
+        var params = new URLSearchParams(window.location.search);
+        return params.get("topic") || "withdraw-third-party";
+      }
+
+      function render() {
+        var topic = queryTopic();
+        var item = data[topic] || data["withdraw-third-party"];
+
+        document.title = item.title + " - 易换官网";
+        document.getElementById("title").textContent = item.title;
+        document.getElementById("summary").textContent = item.summary;
+        document.getElementById("stageTitle").textContent = item.stageTitle;
+        document.getElementById("stageDesc").textContent = item.stageDesc;
+        document.getElementById("scene").textContent = item.scene;
+        document.getElementById("duration").textContent = item.duration;
+        document.getElementById("entry").textContent = item.entry;
+        document.getElementById("updatedAt").textContent = item.updatedAt;
+        document.getElementById("beforeWatch").textContent = item.beforeWatch;
+        document.getElementById("afterWatch").textContent = item.afterWatch;
+        document.getElementById("risk").textContent = item.risk;
+        document.getElementById("videoLabel").textContent = item.title + " 视频讲解";
+
+        document.getElementById("heroBadges").innerHTML = item.badges.map(function (badge, index) {
+          var tones = ["blue", "gold", "green"];
+          return '<span class="pill ' + tones[index % tones.length] + '">' + badge + '</span>';
+        }).join("");
+
+        document.getElementById("chapterList").innerHTML = item.chapters.map(function (chapter) {
+          return '<article class="chapter-card"><strong>' + chapter[1] + '</strong><span>' + chapter[0] + '</span></article>';
+        }).join("");
+
+        document.getElementById("stepList").innerHTML = item.steps.map(function (step, index) {
+          return '<article class="step-block"><div class="pill-row"><span class="pill blue">步骤 ' + (index + 1) + '</span></div><strong>' + step[0] + '</strong><p>' + step[1] + '</p></article>';
+        }).join("");
+
+        document.getElementById("faqList").innerHTML = item.faqs.map(function (faq) {
+          return '<article class="faq-item"><h4>' + faq[0] + '</h4><p>' + faq[1] + '</p></article>';
+        }).join("");
+
+        document.getElementById("catalogList").innerHTML = catalog.map(function (row) {
+          var title = row[0];
+          var key = row[1];
+          var category = row[2];
+          var active = key === topic ? " is-active" : "";
+          return '<a class="academy-detail-catalog-item' + active + '" href="academy-detail.html?topic=' + key + '"><span>' + category + '</span><strong>' + title + '</strong></a>';
+        }).join("");
+      }
+
+      render();
+    })();
+  </script>
+</body>
+</html>
